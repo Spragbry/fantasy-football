@@ -1,10 +1,10 @@
 let statsEL = document.getElementById("stats");
 let statsArray;
 
-let awayName = data[i]["awayTeam"]["name"];
+/*let awayName = data[i]["awayTeam"]["name"];
 let homeName = data[i]["homeTeam"]["name"];
 let awayPlayers = data[i]["missings"]["players"][index]["player"];
-let competition = data[i]["awayTeam"]["tournament"]["name"];
+let competition = data[i]["awayTeam"]["tournament"]["name"];*/
 
 function getApi() {
   const soccerDataApiUrl =
