@@ -8,12 +8,20 @@ function getApi() {
     withCredentials: true,
   })
     .then((response) => response.json())
-    .then(console.log)
     .then((data) => {
       let premierL = data.filter(
         (video) =>
-          video.competition.name === "ENGLAND: Premier League" ||
-          video.competition.name === "KOREA REPUBLIC: K-League 1"
+          // video.competition.name === "ENGLAND: Premier League" ||
+          // video.competition.name === "PORTUGAL: Primeira Liga" ||
+          // video.competition.name === "SPAIN: La Liga" ||
+          video.competition.name === "bundes liga"
+        //video.competition.name === "ITALY: Serie A" ||
+        //video.competition.name === ""FRANCE: Ligue 1""
+
+        //la liga
+        //bundes liga
+        //serieA
+        //ligue 1
       );
       console.log(premierL);
 
