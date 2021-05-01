@@ -8,6 +8,7 @@ function getApi() {
     withCredentials: true,
   })
     .then((response) => response.json())
+    .then(console.log)
     .then((data) => {
       let premierL = data.filter(
         (video) =>
