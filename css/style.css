@@ -1,111 +1,55 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-body {
-    background-color: #d9dcd6;
-}
-.header {
-    padding: 20px;
-    color: #ffffff;
-    text-align: center;
-}
-
-.header h1 {
-    color: gold;
-    font-size: 50px;
-    margin-bottom: 5px;
-    margin-left: 0;
-}
-
-.soccer {
-    background: url(http://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg);
-    background-size: 100px 100px;
-    height: 100px;
-    width: 100px;
-    position: relative;
-    -webkit-animation:roll 4.5s infinite;
-    -moz-animation:roll 4.5s infinite;
-    animation:roll 4.5s infinite;
-  }
-  
-  @-moz-keyframes roll {  
-    0% {left:0px; -webkit-transform: rotate(-360deg);}
-    50% {left:1000px; -webkit-transform: rotate(360deg);}
-    100% {left:0px; -webkit-transform: rotate(-360deg);}
-  }
-  @-webkit-keyframes roll { 
-    0% {left:0px; -webkit-transform: rotate(-360deg);}
-    50% {left:1000px; -webkit-transform: rotate(360deg);}
-    100% {left:0px; -webkit-transform: rotate(-360deg);}
-  }
-  
-  @keyframes roll { 
-    0% {left:0px; -webkit-transform: rotate(-360deg);}
-    50% {left:1000px; -webkit-transform: rotate(360deg);}
-    100% {left:0px; -webkit-transform: rotate(-360deg);}
-  }
-  
-  .world-cup {
-    color: #82AE6F;
-    text-align: center;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Corben', Georgia, Times, serif;
-  }
-  p, div {
-    font-family: 'Nobile', Helvetica, Arial, sans-serif;
-  }
-
-body {
-  background: rgb(193, 19, 19);
-  background: -webkit-linear-gradient(to right,rgb(193, 19, 19), #654ea3);
-  background: linear-gradient(to right,rgb(193, 19, 19), #654ea3);
-  min-height: 100vh;
-}
-
-.nav-login {
-  color: yellow;
+.topflight {
+  overflow: hidden;
+  background-color: #e9e9e9;
+ }
+ 
+ .topflight a {
+  float: left;
   display: block;
-  padding: 5px;
-  position: absolute; 
-  top: 0; 
-  right: 0;
-  width: 550px; 
-  height: 500px;
-}
-
-.nav-about {
-  color: yellow;
-  display: block;
-  padding: 5px;
-  position: absolute; 
-  top: 0; 
-  right: 0;
-  width: 400px; 
-  height: 500px;
-}
-
-.nav-videos {
-  color: yellow;
-  display: block;
-  padding: 5px;
-  position: absolute; 
-  top: 0; 
-  right: 0;
-  width: 250px; 
-  height: 500px;
-}
-
-.nav-stats {
-  color: yellow;
-  display: block;
-  padding: 5px;
-  position: absolute; 
-  top: 0; 
-  right: 0;
-  width: 100px; 
-  height: 500px;
-}
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+ }
+ 
+ /* Change the color of links on hover */
+ .topflight a:hover {
+  background-color: #ddd;
+  color: black;
+ }
+ 
+ /* Style the search box inside the navigation bar */
+ 
+ .topflight a.active {
+  background-color: #2196F3;
+  color: white;
+ }
+ 
+ /* Style the search box inside the navigation bar */
+ .topflight input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+ }
+ 
+ html {
+  background-image: url(./vienna-reyes-qCrKTET_09o-unsplash.jpg);
+  background-repeat: no-repeat, center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+ }
+ 
+.intro {
+  color: yellowgreen;
+  text-align: center;
+  background-color: black;
+  margin: auto;
+  width: 50%;
+  border: 3px solid #ddd;
+  padding: 10px;
+ }
