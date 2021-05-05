@@ -11,10 +11,10 @@ function getApi() {
     .then((data) => {
       let premierL = data.filter(
         (video) =>
-          // video.competition.name === "ENGLAND: Premier League" ||
+        video.competition.name === "ENGLAND: Premier League"
           // video.competition.name === "PORTUGAL: Primeira Liga" ||
           // video.competition.name === "SPAIN: La Liga" ||
-          video.competition.name === "bundes liga"
+          //video.competition.name === "bundes liga"
         //video.competition.name === "ITALY: Serie A" ||
         //video.competition.name === ""FRANCE: Ligue 1""
 
