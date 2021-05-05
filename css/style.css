@@ -41,7 +41,6 @@
   background-repeat: no-repeat, center center fixed;
   background-size: cover;
   height: 100%;
-  overflow: hidden;
  }
  
 .intro {
@@ -53,3 +52,18 @@
   border: 3px solid #ddd;
   padding: 10px;
  }
+
+ .stats {
+  color: yellowgreen;
+  text-align: center;
+  background-color: black;
+  margin: auto;
+  width: 50%;
+  border: 3px solid #ddd;
+  padding: 10px;
+ }
+
+ #video { 
+   margin: 0 auto; 
+   width: 400px; 
+  }
