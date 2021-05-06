@@ -1,9 +1,9 @@
 .topflight {
   overflow: hidden;
   background-color: #e9e9e9;
- }
- 
- .topflight a {
+}
+
+.topflight a {
   float: left;
   display: block;
   color: black;
@@ -11,38 +11,38 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
- }
- 
- /* Change the color of links on hover */
- .topflight a:hover {
+}
+
+/* Change the color of links on hover */
+.topflight a:hover {
   background-color: #ddd;
   color: black;
- }
- 
- /* Style the search box inside the navigation bar */
- 
- .topflight a.active {
-  background-color: #2196F3;
+}
+
+/* Style the search box inside the navigation bar */
+
+.topflight a.active {
+  background-color: #2196f3;
   color: white;
- }
- 
- /* Style the search box inside the navigation bar */
- .topflight input[type=text] {
+}
+
+/* Style the search box inside the navigation bar */
+.topflight input[type="text"] {
   float: right;
   padding: 6px;
   border: none;
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
- }
- 
- html {
+}
+
+html {
   background-image: url(./vienna-reyes-qCrKTET_09o-unsplash.jpg);
   background-repeat: no-repeat, center center fixed;
   background-size: cover;
   height: 100%;
- }
- 
+}
+
 .intro {
   color: yellowgreen;
   text-align: center;
@@ -51,9 +51,9 @@
   width: 50%;
   border: 3px solid #ddd;
   padding: 10px;
- }
+}
 
- .stats {
+.stats {
   color: yellowgreen;
   text-align: center;
   background-color: black;
@@ -61,7 +61,7 @@
   width: 50%;
   border: 3px solid #ddd;
   padding: 10px;
- }
+}
 
  #video { 
    margin: 0 auto; 
@@ -77,3 +77,4 @@
   border: 3px solid #ddd;
   padding: 10px;
   }
+

@@ -1,0 +1,55 @@
+
+<body>
+    <header>
+      <div class="futbol">
+        <div></div>
+      </div>
+      <div class="topflight">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#higlights">
+          <select href="#higlights">
+            <option id="dropdown0" value="0">Highlights/Stats:</option>
+            <option id="dropdown1" value="1">Premier League</option>
+            <option id="dropdown2" value="2">La Liga</option>
+            <option id="dropdown3" value="3">Serie A</option>
+            <option id="dropdown4" value="4">Ligue 1</option>
+            <option id="dropdown5" value="5">Bundesliga</option>
+          </select>
+        </a>
+        <a href="#contact">Contact</a>
+         <!-- Conditionally render login or logout links -->
+        
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        
+        <a href="/login">login</a>
+        
+        <input type="text" placeholder="Search.." />
+      </div>
+      
+    </header>
+    <div class="intro">
+      <h1>Welcome to Fantasy futbol!</h1>
+      <h2>
+        A great place to find all the info you need for your favorite futbol
+        club
+      </h2>
+    </div>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+  
+    </main>
+    
+    <div id="video" style="height: 50px; width: 80%"></div>
+    
+    
+  </div>
+
+  <!-- Render script for logged in users only -->
+ 
+  <script src="/js/logout.js"></script>
+  <script src="/js/scoreBatAPI.js"></script>
+</body>
+
+

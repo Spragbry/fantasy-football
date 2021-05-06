@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Futbols Fantasy</title>
-    <link rel="stylesheet" href="../public/css/style.css" />
-    <!--<link rel="stylesheet" href="./goal.css">-->
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futbols Fantasy</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
     <header>
       <div class="futbol">
         <div></div>
@@ -28,8 +28,14 @@
           </select>
         </a>
         <a href="#contact">Contact</a>
+         <!-- Conditionally render login or logout links -->
+    
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+    
         <input type="text" placeholder="Search.." />
       </div>
+      
     </header>
     <div class="intro">
       <h1>Welcome to Fantasy futbol!</h1>
@@ -38,12 +44,19 @@
         club
       </h2>
     </div>
-
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+ 
     <div id="video" style="height: 50px; width: 80%"></div>
-  </body>
 
-<div id="video" style="height: 50px; width: 80%;"></div>
-<script src="../randomstuff/scoreBatAPI.js"></script>
+    
+  </div>
+
+  <!-- Render script for logged in users only -->
+ 
+  <script src="/js/logout.js"></script>
+  <script src="/randomstuff/scoreBatAPI.js"></script>
 </body>
-
 </html>

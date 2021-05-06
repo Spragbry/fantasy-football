@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS thefanasyfootballclub_db;
+CREATE DATABASE thefanasyfootballclub_db;
