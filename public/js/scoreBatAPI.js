@@ -1,12 +1,8 @@
 let videoEL = document.getElementById("video");
 let videoArray;
 
-let highlights = document.getElementById('dropdown0');
-let premier = document.getElementById('dropdown1');
-let laliga = document.getElementById('dropdown2');
-let serieA = document.getElementById('dropdown3');
-let ligue1 = document.getElementById('dropdown4');
-let bundesliga = document.getElementById('dropdown5');
+let dropdown = document.getElementById('dropdown'); 
+
 
 function getApi() {
   const scoreBatUrl = "https://www.scorebat.com/video-api/v1/";
@@ -17,29 +13,11 @@ function getApi() {
     .then((response) => response.json())
     .then(function(data) {
       console.log(data);
-      if(data){
-        let premierL = data.filter(
-          (video) =>
-          video.competition.name === "ENGLAND: Premier League" ||
-          video.competition.name === "PORTUGAL: Primeira Liga" ||
-          video.competition.name === "SPAIN: La Liga" ||
-          video.competition.name === "bundes liga" ||
-          video.competition.name === "ITALY: Serie A" ||
-          video.competition.name === "FRANCE: Ligue 1"
-  
-        );
-        console.log(premierL);
-        for (let i = 0; i < 5; i++) {
-          console.log(premierL[i].embed);
-          let Element = document.createElement("div");
-          Element.innerHTML = premierL[i].embed;
-          videoEL.append(Element);
-        }
-
-      }
-      else if(dropdown.value === 0)
+      videoEL.innerHTML = '';
+      const dropdownValue = parseInt(dropdown.value);
+      if(dropdownValue === 0)
       {
-        let premierL = data.filter(
+        const highlights = data.filter(
           (video) =>
           video.competition.name === "ENGLAND: Premier League" ||
           video.competition.name === "PORTUGAL: Primeira Liga" ||
@@ -49,15 +27,15 @@ function getApi() {
           video.competition.name === "FRANCE: Ligue 1"
   
         );
-        console.log(premierL);
+        console.log(highlights);
         for (let i = 0; i < 5; i++) {
-          console.log(premierL[i].embed);
+          console.log(highlights[i].embed);
           let Element = document.createElement("div");
-          Element.innerHTML = premierL[i].embed;
+          Element.innerHTML = highlights[i].embed;
           videoEL.append(Element);
         }
       }
-      else if(dropdown.value === 1){
+      else if(dropdownValue === 1){
         let premierL = data.filter(
           (video) =>
           video.competition.name === "ENGLAND: Premier League" ||
@@ -73,51 +51,51 @@ function getApi() {
         }
 
       }
-      else if(dropdown.value === 2){
-        let premierL = data.filter(
+      else if(dropdownValue === 2){
+        let laliga = data.filter(
           (video) =>
             video.competition.name === "SPAIN: La Liga" 
         );
-        console.log(premierL);
+        console.log(laliga);
         for (let i = 0; i < 5; i++) {
-          console.log(premierL[i].embed);
+          console.log(laliga[i].embed);
           let Element = document.createElement("div");
-          Element.innerHTML = premierL[i].embed;
+          Element.innerHTML = laliga[i].embed;
           videoEL.append(Element);
         }
 
       }
-      else if(dropdown.value === 3){
-        let premierL = data.filter(
+      else if(dropdownValue === 3){
+        let serieA= data.filter(
           (video) =>
           video.competition.name === "ITALY: Serie A"
         );
-        console.log(premierL);
+        console.log(serieA);
         for (let i = 0; i < 5; i++) {
-          console.log(premierL[i].embed);
+          console.log(serieA[i].embed);
           let Element = document.createElement("div");
-          Element.innerHTML = premierL[i].embed;
+          Element.innerHTML = serieA[i].embed;
           videoEL.append(Element);
         }
 
       }
-      else if(dropdown.value === 4){
-        let premierL = data.filter(
+      else if(dropdownValue === 4){
+        let ligue = data.filter(
           (video) =>
           video.competition.name === "FRANCE: Ligue 1"
   
         );
-        console.log(premierL);
+        console.log(ligue);
         for (let i = 0; i < 5; i++) {
-          console.log(premierL[i].embed);
+          console.log(ligue[i].embed);
           let Element = document.createElement("div");
-          Element.innerHTML = premierL[i].embed;
+          Element.innerHTML = ligue[i].embed;
           videoEL.append(Element);
         }
 
       }
-      else if(dropdown.value === 5){
-        let premierL = data.filter(
+      else if(dropdownValue === 5){
+        let bundes = data.filter(
           (video) =>
           //video.competition.name === "ENGLAND: Premier League"
           // video.competition.name === "PORTUGAL: Primeira Liga" ||
@@ -131,17 +109,17 @@ function getApi() {
           //serieA
           //ligue 1
         );
-        console.log(premierL);
+        console.log(bundes);
         for (let i = 0; i < 5; i++) {
-          console.log(premierL[i].embed);
+          console.log(bundes[i].embed);
           let Element = document.createElement("div");
-          Element.innerHTML = premierL[i].embed;
+          Element.innerHTML = bundes[i].embed;
           videoEL.append(Element);
         }
 
       }
       else{
-        premierL = data.video;
+        console.log("roadbump");
       }
       
       /*for (let i = 0; i < 5; i++) {
@@ -156,6 +134,9 @@ function getApi() {
     });
 }
 
-getApi();
+dropdown.onchange = getApi;
+
+
+
 
 
