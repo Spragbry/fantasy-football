@@ -63,6 +63,7 @@ html {
   padding: 10px;
 }
 
+
 #video {
   margin: 0 auto;
   width: 400px;
@@ -76,4 +77,4 @@ html {
   width: 50%;
   border: 3px solid #ddd;
   padding: 10px;
-  }
+}
