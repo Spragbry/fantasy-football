@@ -5,8 +5,9 @@
         <div></div>
       </div>
       <div class="topflight">
-        <a class="active" href="#home">Home</a>
+        <a class="active" href="javascript:window.location.href=window.location.href" href="#home">Home</a>
         <a href="#about">About</a>
+        {{#if loggedIn}}
         <a>
           <select href="#higlights" id="dropdown">
             <option value="0">Highlights/Stats:</option>
@@ -17,15 +18,20 @@
             <option value="5">Bundesliga</option>
           </select>
         </a>
+        {{/if}}
         <a href="#contact">Contact</a>
+        
          <!-- Conditionally render login or logout links -->
+        {{#if loggedIn}}
+        <a href="#profile">profile</a> |
+        <a href="#stats">team stats</a> |
         
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        
+        <a href="/logout" class="logout" id="logout">logout</a>
+        {{else}}
         <a href="/login">login</a>
-        
-        <input type="text" placeholder="Search.." />
+        {{/if}}
+        {{!-- <a href="#member">Welcome {{User}}</a> --}}
+        {{!-- <input type="text" placeholder="Search.." /> --}}
       </div>
       
     </header>
@@ -47,8 +53,9 @@
   </div>
 
   <!-- Render script for logged in users only -->
- 
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
+  {{/if}}
   <script src="/js/scoreBatAPI.js"></script>
 </body>
 
